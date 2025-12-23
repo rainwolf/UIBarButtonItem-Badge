@@ -10,7 +10,7 @@
 
 @interface UIBarButtonItem (Badge)
 
-@property (strong, atomic) UILabel *badge;
+@property (strong, atomic) UILabel *oldBadge;
 
 // Badge value to be display
 @property (nonatomic) NSString *badgeValue;
