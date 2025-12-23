@@ -153,7 +153,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 #pragma mark - getters/setters
--(UILabel*) badge {
+-(UILabel*) oldBadge {
     UILabel* lbl = objc_getAssociatedObject(self, &UIBarButtonItem_badgeKey);
     if(lbl==nil) {
         lbl = [[UILabel alloc] initWithFrame:CGRectMake(self.badgeOriginX, self.badgeOriginY, 20, 20)];
@@ -164,7 +164,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     }
     return lbl;
 }
--(void)setBadge:(UILabel *)badgeLabel
+-(void)setOldBadge:(UILabel *)badgeLabel
 {
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeKey, badgeLabel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
