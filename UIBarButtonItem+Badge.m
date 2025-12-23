@@ -157,7 +157,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
     UILabel* lbl = objc_getAssociatedObject(self, &UIBarButtonItem_badgeKey);
     if(lbl==nil) {
         lbl = [[UILabel alloc] initWithFrame:CGRectMake(self.badgeOriginX, self.badgeOriginY, 20, 20)];
-        [self setBadge:lbl];
+        [self setOldBadge:lbl];
         [self badgeInit];
         [self.customView addSubview:lbl];
         lbl.textAlignment = NSTextAlignmentCenter;
